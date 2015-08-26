@@ -19,6 +19,7 @@ var app = app || {};
 		events: {
 			'click .toggle': 'toggleCompleted',
 			'dblclick label': 'edit',
+			'click .priority-btn': 'togglePriority',
 			'click .edit-btn': 'edit', //added this line to make new button
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
@@ -54,6 +55,14 @@ var app = app || {};
 			this.toggleVisible();
 			this.$input = this.$('.edit');
 			return this;
+		},
+
+		togglePriority: function () {
+			if (this.$el.hasClass('priority')) {
+				this.$el.removeClass('priority');
+			} else {
+				this.$el.addClass('priority');
+			}
 		},
 
 		toggleVisible: function () {

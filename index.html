@@ -27,7 +27,8 @@
 			<div class="view">
 				<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
 				<label><%- title %><%= completed ? '-- checked' : '' %></label>
-				<button class="edit-btn"></button> //added this in to make button.. link to views/todo-view.js events json
+				<button class="priority-btn"></button>
+				<button class="edit-btn"></button>
 				<button class="destroy"></button>
 			</div>
 			<input class="edit" value="<%- title %>">
